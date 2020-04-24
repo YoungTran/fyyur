@@ -522,5 +522,8 @@ if not app.debug:
 # Or specify port manually:
 
 if __name__ == '__main__':
+    project_root = os.path.dirname(__file__)
+    template_path = os.path.join(project_root, 'templates')
+    print(template_path)
     port = int(os.environ.get('PORT', 4000))
     app.run(host='0.0.0.0', port=port)
